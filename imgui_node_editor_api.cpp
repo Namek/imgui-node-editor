@@ -576,6 +576,11 @@ void ax::NodeEditor::NavigateToSelection(bool zoomIn, float duration)
     s_Editor->NavigateTo(s_Editor->GetSelectionBounds(), zoomIn, duration);
 }
 
+void ax::NodeEditor::NavigateToBounds(const ImVec4& bounds, bool zoomIn, float duration)
+{
+    s_Editor->NavigateTo(bounds, zoomIn, duration);
+}
+
 bool ax::NodeEditor::ShowNodeContextMenu(NodeId* nodeId)
 {
     return s_Editor->GetContextMenu().ShowNodeContextMenu(nodeId);
